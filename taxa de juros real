@@ -1,0 +1,20 @@
+import time
+from time import sleep
+
+print("Este programa calcula a taxa de juros real do seu investimento\nvocê deve digitar os números como porcentagem\nlembre-se também de digitar a inflação e o juros nominal na mesma medida de tempo.")
+
+sleep(0.5)
+
+juros = float(input("digite a taxa de juros nominal: "))
+
+inflacao = float(input("digite a inflação do período: "))
+
+N = (juros / 100) + 1
+
+h = (inflacao / 100) + 1
+
+R = (N / h) - 1
+
+real = R * 100
+
+print("a taxa de juros real é " + str(real) + "%")
