@@ -1,0 +1,19 @@
+lista = []
+i = 3
+while i < 10:
+    lista.append(i)
+    i += 1
+acumulador = 0
+for i in lista:
+    divisor = i - 1
+    while divisor > 1:
+        teste = i % divisor
+        acumulador += teste
+        if (teste != 0):
+            divisor -= 1
+        if (teste == 0):
+            break
+    if (divisor == 1):
+        print("o numero " + str(i) + " é primo")
+    else:
+        print("o numero " + str(i) + " é composto")
